@@ -85,7 +85,9 @@ public class FbDialog extends Dialog {
         this.setOnCancelListener(new OnCancelListener() {
 			@Override
 			public void onCancel(DialogInterface dialog) {
+				mWebView.stopLoading();
 				mListener.onCancel();
+				FbDialog.this.dismiss();
 			}
 		});
     }
