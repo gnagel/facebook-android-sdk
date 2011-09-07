@@ -81,6 +81,13 @@ public class FbDialog extends Dialog {
         addContentView(mContent, WRAP);
 
         getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+        this.setOnCancelListener(new OnCancelListener() {
+			@Override
+			public void onCancel(DialogInterface dialog) {
+				mListener.onCancel();
+			}
+		});
     }
 
     private void setUpTitle() {
