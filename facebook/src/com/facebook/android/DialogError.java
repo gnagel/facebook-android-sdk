@@ -43,13 +43,12 @@ public class DialogError extends Throwable {
 	}
 
 
-	int getErrorCode() {
+	public int getErrorCode() {
 		return mErrorCode;
 	}
 
 
-	String getFailingUrl() {
+	public String getFailingUrl() {
 		return mFailingUrl;
 	}
-
 }
