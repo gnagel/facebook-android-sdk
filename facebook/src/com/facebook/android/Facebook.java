@@ -299,8 +299,10 @@ public class Facebook {
 					setAccessToken(data.getStringExtra(Facebook.TOKEN));
 					setAccessExpiresIn(data.getStringExtra(Facebook.EXPIRES));
 					if (isSessionValid()) {
-						Log.d("Facebook-authorize", "Login Success! access_token=" + getAccessToken() + " expires="
-								+ getAccessExpires());
+						// Log.d("Facebook-authorize",
+						// "Login Success! access_token=" + getAccessToken() +
+						// " expires="
+						// + getAccessExpires());
 						mAuthDialogListener.onComplete(data.getExtras());
 					}
 					else {

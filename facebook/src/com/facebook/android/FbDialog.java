@@ -213,6 +213,19 @@ public class FbDialog extends Dialog {
 
 
 	private void setUpWebView() {
+		try {
+			getContext().deleteDatabase("webview.db");
+		}
+		catch (final Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			getContext().deleteDatabase("webviewCache.db");
+		}
+		catch (final Exception e) {
+			e.printStackTrace();
+		}
+
 		mWebView = new WebView(getContext());
 		mWebView.setVerticalScrollBarEnabled(false);
 		mWebView.setHorizontalScrollBarEnabled(false);

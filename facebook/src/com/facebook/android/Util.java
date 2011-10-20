@@ -38,7 +38,6 @@ import org.json.JSONObject;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 
@@ -155,7 +154,7 @@ public final class Util {
 		if (method.equals("GET")) {
 			url = url + "?" + Util.encodeUrl(params);
 		}
-		Log.d("Facebook-Util", method + " URL: " + url);
+		// Log.d("Facebook-Util", method + " URL: " + url);
 		final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
 		conn.setRequestProperty("User-Agent", System.getProperties().getProperty("http.agent") + " FacebookAndroidSDK");
 		if (!method.equals("GET")) {
