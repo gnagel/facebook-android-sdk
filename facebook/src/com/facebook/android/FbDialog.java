@@ -29,7 +29,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Display;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -74,7 +73,7 @@ public class FbDialog extends Dialog {
 
 		@Override
 		public void onPageStarted(final WebView view, final String url, final Bitmap favicon) {
-			Log.d("Facebook-WebView", "Webview loading URL: " + url);
+			// Log.d("Facebook-WebView", "Webview loading URL: " + url);
 			super.onPageStarted(view, url, favicon);
 			try {
 				mSpinner.show();
@@ -96,7 +95,7 @@ public class FbDialog extends Dialog {
 
 		@Override
 		public boolean shouldOverrideUrlLoading(final WebView view, final String url) {
-			Log.d("Facebook-WebView", "Redirect URL: " + url);
+			// Log.d("Facebook-WebView", "Redirect URL: " + url);
 			if (url.startsWith(Facebook.REDIRECT_URI)) {
 				final Bundle values = Util.parseUrl(url);
 
